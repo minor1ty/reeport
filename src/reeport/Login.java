@@ -25,6 +25,7 @@ public class Login extends javax.swing.JFrame {
         btnLupaKataSandi = new javax.swing.JLabel();
         txtNamaPengguna = new javax.swing.JTextField();
         txtKataSandi = new javax.swing.JPasswordField();
+        btnExit = new javax.swing.JLabel();
         background = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,6 +58,16 @@ public class Login extends javax.swing.JFrame {
         txtKataSandi.setBorder(null);
         txtKataSandi.setOpaque(false);
         getContentPane().add(txtKataSandi, new org.netbeans.lib.awtextra.AbsoluteConstraints(767, 307, 215, 38));
+
+        btnExit.setFont(new java.awt.Font("Poppins", 0, 24)); // NOI18N
+        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnExit.setText("X");
+        btnExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnExitMouseClicked(evt);
+            }
+        });
+        getContentPane().add(btnExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 90, 30, -1));
 
         background.setIcon(new javax.swing.ImageIcon("D:\\Kuliah\\Analisa dan Perancangan Sistem Informasi\\Reeport\\eraport-01.png")); // NOI18N
         getContentPane().add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -135,12 +146,17 @@ public class Login extends javax.swing.JFrame {
         });*/
     }//GEN-LAST:event_btnMasukMouseClicked
 
+    private void btnExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnExitMouseClicked
+        this.dispose();
+    }//GEN-LAST:event_btnExitMouseClicked
+
     public static void main(String args[]) {
 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel background;
+    private javax.swing.JLabel btnExit;
     private javax.swing.JLabel btnLupaKataSandi;
     private javax.swing.JLabel btnMasuk;
     private javax.swing.JPasswordField txtKataSandi;

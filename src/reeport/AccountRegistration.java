@@ -102,22 +102,13 @@ public class AccountRegistration extends javax.swing.JFrame {
             pst.executeUpdate();
             
             this.dispose();
-                java.awt.EventQueue.invokeLater(new Runnable() {
-                    public void run() {
-                        new Dashboard().setVisible(true);
-                    }
-                });
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    new TambahWaliKelas().setVisible(true);
+                }
+            });
             con.close();
-            System.out.println("con closed");
-                
-            /*if (rs.next()) {
-                this.dispose();
-                java.awt.EventQueue.invokeLater(new Runnable() {
-                    public void run() {
-                        new Dashboard().setVisible(true);
-                    }
-                });
-            }*/
+            System.out.println("con closed");                
             
         } catch (Exception e) {
             System.out.println("Error: " + e);
